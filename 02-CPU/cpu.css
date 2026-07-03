@@ -4,6 +4,7 @@ body
 	/*font-family: 'Segoe UI', Tahoma, Geneva, Verdana,  sans-serif;*/
 	font-family: Roboto Condensed, 'Cambria Math';
 	font-size: 22px;
+	padding:50px;
 	/*font-style:italic */
 	/*font-weight:800;*/
 	/*font: 32px 'Segoe UI';*/
@@ -34,3 +35,17 @@ figure
 	font-style:italic;
 	font-weight:200;
 }
+.cite {
+	border-left: solid 5px blue;
+	padding-left: 15px;
+	margin-left: 50px;
+	/*border-width:1px;
+	border-style:solid;*/
+	/*margin: 32px;*/
+	/*padding:50px 100px 200px 300px;*/
+}
+/*
+	border - рамка;
+	margin - внешний отступ от рамки;
+	padding - внутренний отступ от рамки;
+*/
