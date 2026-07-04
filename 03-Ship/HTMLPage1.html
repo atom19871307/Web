@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Beautiful Ship</title>
+	<style>
+		table 
+		{
+			/* Убирает двойные границы между ячейками, делая их единой сеткой */
+			border-collapse: collapse;
+			/* Задает голубой фоновый цвет для всей таблицы (цвет неба) */
+			background-color: #33d6ff;
+			/* Создает очень толстую (200 пикселей) белую внешнюю рамку вокруг рисунка */
+			border: 200px solid #ffffff;
+			/* Центрирует таблицу на странице и создает отступ в 200 пикселей сверху и снизу */
+			margin: 200px auto;
+		}
+
+		td 
+		{
+			/* Фиксированный размер для сетки */
+			width: 150px;
+			height: 40px;
+			/* Светло-голубая сетка */
+			border: 1px solid #5ce6ff;
+			padding: 0;
+		}
+		/* Цвета пикселей */
+		.sky 
+		{
+			background-color: #33d6ff;
+		}
+		/* Небо */
+		.sun 
+		{
+			background-color: #ffff00;
+		}
+		/* Солнце */
+		.mast 
+		{
+			background-color: #555500;
+		}
+		/* Мачта / палуба */
+		.sail 
+		{
+			background-color: #ff0000;
+		}
+		/* Парус */
+		.deck 
+		{
+			background-color: #512b00;
+		}
+		/* Бортик палубы */
+		.hull 
+		{
+			background-color: #663300;
+		}
+		/* Корпус */
+		.sea 
+		{
+			background-color: #0044cc;
+		}
+		/* Море */
+
+		/*Черный цвет для людей*/
+		.human 
+		{
+			background: linear-gradient(to right, #555500 35%, #000000 35%, #000000 65%, #555500 65%);
+		}
+	</style>
+</head>
+<body>
+
+	<table>
+		<!-- Строка 1 -->
+		<tr>
+			<td class="sun"></td>
+			<td class="sun"></td>
+			<td class="sun"></td>
+			<td class="sun"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 2 -->
+		<tr>
+			<td class="sun"></td>
+			<td class="sun"></td>
+			<td class="sun"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 3 -->
+		<tr>
+			<td class="sun"></td>
+			<td class="sun"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="mast"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 4 -->
+		<tr>
+			<td class="sun"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="mast"></td>
+			<td class="sail"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 5 -->
+		<tr>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="mast"></td>
+			<td class="sail"></td>
+			<td class="sail"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 6 -->
+		<tr>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="mast"></td>
+			<td class="sail"></td>
+			<td class="sail"></td>
+			<td class="sail"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 7 -->
+		<tr>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="mast"></td>
+			<td class="sail"></td>
+			<td class="sail"></td>
+			<td class="sail"></td>
+			<td class="sail"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 8 -->
+		<tr>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="mast"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 9 -->
+		<tr>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="mast"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 10 -->
+		<tr>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="human"></td> <!--  человек 1 -->
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="mast"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="human"></td> <!--  человек 2 -->
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 11 Палуба -->
+		<tr>
+			<td class="deck"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="deck"></td>
+			<td class="sky"></td>
+		</tr>
+		<!-- Строка 12 -->
+		<tr>
+			<td class="sea"></td>
+			<td class="hull"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="hull"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+		</tr>
+		<!-- Строка 13 -->
+		<tr>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="hull"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="hull"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+		</tr>
+		<!-- Строка 14 -->
+		<tr>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="hull"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="hull"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+		</tr>
+		<!-- Строка 15 -->
+		<tr>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="hull"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="mast"></td>
+			<td class="hull"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+		</tr>
+		<!-- Строка 16 -->
+		<tr>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="hull"></td>
+			<td class="hull"></td>
+			<td class="hull"></td>
+			<td class="hull"></td>
+			<td class="hull"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+		</tr>
+		<!-- Строка 17 -->
+		<tr>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+		</tr>
+		<!-- Строка 18 -->
+		<tr>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+			<td class="sea"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
