@@ -1,0 +1,75 @@
+﻿﻿ /*
+	-----------------------------------------
+	selector1 > selector2
+	{
+		//Такая конструкция описывает свойства только тех 'selector2',
+		//которые непосредственно вложены в 'selector1'
+	}
+	-----------------------------------------
+*/
+body 
+{
+}
+/*Непосредственная вложенность*/
+/*.block > h2
+{
+	background-color:limegreen;
+}*/
+
+/*Вложенность на любую глубину*/
+/*.block h2
+{
+	background-color:limegreen;
+}*/
+
+	body > h2
+	{
+		background-color:limegreen;
+	}
+
+.frame, .next, .labuda 
+{
+	border: solid 1px;
+	width: 200px;
+	height: 150px;
+	margin: 32px auto
+}
+	/*Непосредственное следование*/
+	/*.frame + .next
+	{
+		background-color:green;
+	}*/
+	/*Следование элементов на одном уровне*/
+.frame ~ .next
+{
+	background-color:green;
+}
+/*.next 
+{
+	border: solid 1px;
+	width: 200px;
+	height: 150px;
+	margin: 32px auto
+}*/
+.labuda 
+{
+	background-color: red;
+}
+.labuda:before
+{
+	border:solid 12px;
+}
+
+.next:hover, .next:hover:before
+{
+	box-shadow:0px 0px 25px 5px gray;
+}
+.combinator
+{
+	border:solid 1px;
+}
+.combinator:hover, .labuda 
+{
+	box-shadow: 0px 0px 25px 5px red;
+
+}
