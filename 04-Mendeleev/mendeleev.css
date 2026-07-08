@@ -62,6 +62,21 @@ h3 {
 	line-height: 1.2;
 	user-select: none;
 }
+/*--------------------------------------------------------------------------------*/
+	/* Эффект при наведении на ОДИН конкретный элемент */
+	.element:hover 
+	{
+		/* Чуть уменьшил, чтобы не перекрывал соседей слишком сильно */
+		transform: scale(1.3) !important;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+		/* Выносит активный элемент на передний план */
+		z-index: 10;
+	}
+
+
+/*--------------------------------------------------------------------------------*/
+
+
 
 	.element:hover 
 	{
@@ -75,8 +90,8 @@ h3 {
 	.element.metal 
 	{
 		background-color: #0000FF;
-		border-color: #2e7d32;
-		color: #1b5e20;
+		border-color: #0000CC;
+		color: #FFFFFF;
 	}
 
 	/* Металлоиды */
@@ -98,7 +113,7 @@ h3 {
 	/* Галогены */
 	.element.halogen 
 	{
-		background-color: 00FF00;
+		background-color: #00FF00;
 		border-color: #0d47a1;
 		color: #0d47a1;
 	}
@@ -126,3 +141,50 @@ h3 {
 		border-color: #bf360c;
 		color: #4e342e;
 	}
+
+/* ==========================================================================
+   ПОДСВЕТКА ВСЕЙ ГРУППЫ ПРИ НАВЕДЕНИИ НА ОДИН ИЗ ЕЕ ЭЛЕМЕНТОВ
+   ========================================================================== */
+
+/* Если навели на металл — подсвечиваем все металлы */
+.mendeleev-table:has(.metal:hover) .element.metal 
+{
+	background-color: #3333ff;
+	box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+/* Если навели на металлоид — подсвечиваем все металлоиды */
+.mendeleev-table:has(.metalloid:hover) .element.metalloid 
+{
+	background-color: #ffff4d;
+	box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+/* Если навели на неметалл — подсвечиваем все неметаллы */
+.mendeleev-table:has(.nonmetal:hover) .element.nonmetal 
+{
+	background-color: #ff3333;
+	box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+/* Если навели на галоген — подсвечиваем все галогены */
+.mendeleev-table:has(.halogen:hover) .element.halogen 
+{
+	background-color: #33ff33;
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+/* Если навели на благородный газ — подсвечиваем все благородные газы */
+.mendeleev-table:has(.noble-gas:hover) .element.noble-gas 
+{
+	background-color: #e0a3f0;
+	box-shadow: 0 0 10px rgba(206, 147, 216, 0.5);
+}
+/* Если навели на лантаноид — подсвечиваем все лантаноиды */
+.mendeleev-table:has(.lanthanide:hover) .element.lanthanide 
+{
+	background-color: #ff9170 !important;
+	box-shadow: 0 0 10px rgba(255, 171, 145, 0.5);
+}
+/* Если навели на актинид — подсвечиваем все актиниды */
+.mendeleev-table:has(.actinide:hover) .element.actinide 
+{
+	background-color: #f06ea0 !important;
+	box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);
+}
