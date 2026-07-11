@@ -46,7 +46,8 @@
 {
 	width:28px;
 	height:28px;
-	font-size:17px;
+	font-size:20px;
+	margin-left:2px;
 	margin-top:2px;
 	background-color:rgb(39, 104, 249);
 	color:white;
@@ -55,13 +56,25 @@
 	box-shadow:
 		inset 3px 1px 7px 0px #2288FF,
 		inset -2px -1px 5px 0px #0000BB;
+
+	/*display:flex;
+	justify-content:center;
+	align-items:center;*/
 }
-.close-button
+.control-button-signature
 {
-	background-color:rgb(220, 77, 57);
-	box-shadow: 
-		inset 2px 1px 7px 0px #FF8888,
-		inset -2px -1px 5px 0px #770000;
+	margin-top:-5px;
+	margin-left:-2px;
+	text-align:center;
+}
+.close-button-signature
+{
+	margin:-2px 0 0 -1px;
+}
+.close-button 
+{
+	background-color: rgb(220, 77, 57);
+	box-shadow: inset 2px 1px 7px 0px #FF8888, inset -2px -1px 5px 0px #770000;
 }
 .title-bar-icon-and-signature
 {
@@ -71,6 +84,8 @@
 .title-bar-icon-and-signature, .title-bar-window-control-buttons
 {
 	margin:0px 8px;
+	display:flex;
+	align-items:center;
 }
 .title-bar img 
 {
