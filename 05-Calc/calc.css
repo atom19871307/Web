@@ -141,6 +141,7 @@
 	width: 24px;
 	height: 24px;
 }
+/* /////////////////////////////////////////////////////// */
 .client-rect 
 {
 	width: 100%;
@@ -186,7 +187,7 @@
 }
 .display-container > input:focus-visible
 {
-	/*                                */
+	/*если поле 'disabled', в этом нет ноеобходимости*/
 	outline:none;
 }
 .display-container > input[disabled]
@@ -213,13 +214,6 @@
 	/*grid-gap:8px;*/
 	grid-row-gap:8px;
 }
-.clear-buttons
-{
-	grid-row:1;
-	grid-column-start:2;
-	grid-column-end:7;
-
-}
 .square
 {
 	width:30px;
@@ -230,4 +224,15 @@
 {
 	width: 42px;
 	height: 30px;
+}
+.clear-buttons
+{
+	grid-row:1;
+	grid-column-start:2;
+	grid-column-end:7;
+}
+.clear-buttons > button
+{
+	width: 79px;
+	margin-right:1px;
 }
