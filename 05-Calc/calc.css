@@ -197,7 +197,7 @@
 #display
 {
 	width: 97%;
-	border:solid 1px gray;
+	border:solid 1.5px gray;
 	border-radius: 0px;
 	text-align:right;
 }
@@ -206,7 +206,6 @@
 {
 	width:95%;
 	margin:8px 11px;
-
 	display:grid;
 	grid-template-rows:repeat(4, auto);
 	grid-template-columns:repeat(6, auto);
@@ -222,11 +221,13 @@
 	border:inset 2px;
 	margin-left:4px;
 }
+
 .calc-buttons button
 {
 	width: 42px;
 	height: 30px;
 }
+
 .clear-buttons
 {
 	grid-row:1;
@@ -242,10 +243,23 @@
 {
 	margin:0px 7px 0px -2px;
 }
-.calc-buttons > button
+.calc-buttons button
 {
 	color:blue;
+	border:solid 1px darkblue;
+	border-radius:5px;
+
+	box-shadow: inset 0px -2px 3px 0px lightgray;
 }
+.calc-buttons button:hover
+{
+	box-shadow: inset 0px -1px 5px 0px orange;
+}
+	.calc-buttons button:active 
+	{
+		background-color:lightgray;
+		box-shadow: inset 0px -1px 5px 0px white, inset 0px 2px 5px 1px darkgray;
+	}
 .calc-buttons > .memory-button,.calc-buttons > .operation-button, .clear-buttons > button
 {
 	color:red;
