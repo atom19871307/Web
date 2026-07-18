@@ -5,6 +5,12 @@
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	font-family:Tahoma;
+
+	display:flax;
+	justify-content:center;
+	align-items:center;
+
+	padding:48px;
 }
 .main-window 
 {
