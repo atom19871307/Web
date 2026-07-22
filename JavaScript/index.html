@@ -108,14 +108,12 @@
 
     <script>
 
-        function Factorial()
-        {
+        function Factorial() {
             let factorial_number = document.getElementById("factorial-number");	//Получаем элемент страницы, в который пользователь вводит значение.
             let n = factorial_number.value;
             let f = BigInt(1);
             document.getElementById("factorial-result").innerHTML = ``;
-            for (let i = 1n; i <= n; i++)
-            {
+            for (let i = 1n; i <= n; i++) {
                 f *= i;
                 //document.write(`${i}! = ${f};<br>`);
                 document.getElementById("factorial-result").innerHTML += `${i}! = ${f};<br>`;
@@ -154,6 +152,39 @@
         document.write(`<h2>${n}! = ${f}</h2>`);
         */
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //1. Вводим данные      / 1. Մուտքագրում ենք տվյալները
+        /*let base = prompt("Введите число (основание)");
+        let exponent = prompt("Введите степень");
+
+        // 2. Возводим в степень / 2. Բարձրացնում ենք աստիճան
+        let result = Number(base) ** Number(exponent);
+
+        // 3. Выводим результат / 3. Արտածում ենք արդյունքը
+        alert("Результат:" + result);*/
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+    </script>
+    <!-- Մուտքագրման դաշտեր HTML-ում -->
+    <div>
+        Введите число (основание): <input type="number" id="baseInput" value=""><br><br>
+        Введите степень: <input type="number" id="exponentInput" value=""><br><br>
+        <button onclick="calculatePower()">Вычислить степень</button>
+        <!-- Արդյունքը ցուցադրելու տեղը -->
+        <div id="powerResult" style="margin-top: 15px; font-weight: bold; font-size: 18px;"></div>
+    </div>
+
+    <script>
+        function calculatePower() {
+            // 1. Վերցնում ենք տվյալները HTML դաշտերից
+            let base = document.getElementById("baseInput").value;
+            let exponent = document.getElementById("exponentInput").value;
+
+            // 2. Բարձրացնում ենք աստիճան
+            let result = Number(base) ** Number(exponent);
+
+            // 3. Գեղեցիկ արտածում ենք էկրանին (ինչպես ֆակտորիալը)
+            document.getElementById("powerResult").innerHTML = `${base}<sup>${exponent}</sup> = ${result};`;
+        }
     </script>
 </body>
 </html>
