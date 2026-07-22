@@ -1,5 +1,4 @@
-﻿﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -108,13 +107,52 @@
     </div>
 
     <script>
-		//alert("Привет!\nЭто модальное окно браузера");
-		var name = prompt("Введите Ваше имя");
-		//alert('Привет ' + name); //конкатенация
-		let str = `Привет ${name}!`;
-		alert(str);
-		console.log(str);
-		document.write(`<h3>${str}</h3>`);
+
+        function Factorial()
+        {
+            let factorial_number = document.getElementById("factorial-number");	//Получаем элемент страницы, в который пользователь вводит значение.
+            let n = factorial_number.value;
+            let f = BigInt(1);
+            document.getElementById("factorial-result").innerHTML = ``;
+            for (let i = 1n; i <= n; i++)
+            {
+                f *= i;
+                //document.write(`${i}! = ${f};<br>`);
+                document.getElementById("factorial-result").innerHTML += `${i}! = ${f};<br>`;
+            }
+            document.getElementById("factorial-result").innerHTML += `<h3>${n}! = ${f};</h3>`;
+        }
+
+        //alert("Привет!\nЭто модальное окно браузера");
+        //var name = prompt("Введите Ваше имя");
+        ////alert('Привет ' + name); //конкатенация
+        //let str = `Привет ${name}!`;
+        //alert(str);
+        //console.log(str);
+        //document.write(`<h3>${str}</h3>`);
+
+        //{
+        //	const PI = 3.14157;
+        //	a = 2;
+        //}
+        //document.write(a + '<br>');
+        //document.write(PI + '<br>');
+
+        /*
+        let n = prompt("Введите число для вычисления факториала:");
+        let f = BigInt(1);
+        document.write(`<h2>${typeof (n)}</h2>`);
+        document.write(`<h2>${typeof (f)}</h2>`);
+        //	l-value = r-value;
+        //	l-value - это переменная слева (переменная, в которую производится запись);
+        //	r-value - это выражение справа (выражение, значение которого будет записано в переменную слева);
+        for (let i = 1n; i <= n; i++)
+        {
+            f *= i;
+            document.write(`${i}! = ${f};<br>`);
+        }
+        document.write(`<h2>${n}! = ${f}</h2>`);
+        */
 
     </script>
 </body>
