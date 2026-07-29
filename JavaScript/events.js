@@ -1,4 +1,4 @@
-// JavaScript source code
+﻿// JavaScript source code
 function setImage()
 {
 	let filename = document.getElementById("image-file");
@@ -14,7 +14,7 @@ function setImage()
 	document.getElementById("debug").innerHTML = URL.createObjectURL(file);
 	document.getElementById("image").src = URL.createObjectURL(file);
 }
-//DOM - Document Object Model (��������� ������ ���������).
+//DOM - Document Object Model (Объектная модель документа).
 //Document document = new Document();
 function setBackgroundColor()
 {
@@ -84,3 +84,31 @@ function tick_timer()
 
 	setTimeout(tick_timer, 100);
 }
+//*	<!-- /////////////////////// //////////////////////////// ///////// -->*/	
+
+// Transition-ի տևողության փոփոխություն (0-20 վայրկյան)
+function changeTransitionDuration(event)
+{
+	const duration = parseFloat(event.target.value);
+	const display = document.getElementById('duration-display');
+	display.textContent = duration.toFixed(1);
+
+	// Եթե duration-ը մեծ է 10 վայրկյանից - կարմիր գույն
+	if (duration > 10) {
+		display.style.color = 'red';
+		display.style.fontWeight = 'bold';
+	} else if (duration > 5) {
+		display.style.color = 'orange';
+		display.style.fontWeight = 'bold';
+	} else {
+		display.style.color = '';
+		display.style.fontWeight = '';
+	}
+
+	// Թարմացնել CSS փոփոխականը
+	document.documentElement.style.setProperty('--transition-duration', duration + 's');
+
+	// Լրացուցիչ՝ console-ում ցույց տալ փոփոխությունը (debug-ի համար)
+	console.log(`Transition duration set to: ${duration}s`);
+}
+//*	<!-- /////////////////////// //////////////////////////// ///////// -->*/	

@@ -37,6 +37,16 @@
 					<input type="color" id="foreground-color" oninput="setColor(event)">
 					<!--<input type="color" id="foreground-color" oninput="setForegroundColor(event)">-->
 				</div>
+				<!-- ///////////////////////     ////////////////////////////    /////////  -->
+				<div>
+					<label for="transition-duration">Скорость перехода (сек):</label>
+					<input type="range" id="transitionW-duration"
+						   min="0" max="20" step="0.1" value="3"
+						   oninput="changeTransitionDuration(event)">
+					<span id="duration-display">3.0</span> сек
+				</div>
+				<!-- ///////////////////////     ////////////////////////////    /////////  -->
+
 			</div>
 		</div>
 	</details>
