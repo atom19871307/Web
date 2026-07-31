@@ -41,7 +41,7 @@ transition: background-color var(--transition-duration, 3s), color var(--transit
 		width: 32px;
 		height: 32px;
 	}
-/* ///////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////*/
 #switch-background 
 {
 	width: 32px;
@@ -121,4 +121,57 @@ transition: background-color var(--transition-duration, 3s), color var(--transit
 	display: inline-block;
 	font-weight: bold;
 	transition: color 0.3s;
+}
+
+/* /////////////////////////////////////////////////////////////////////*/
+
+#countdown-time > input
+{
+	font-size: 22px;
+}
+
+
+
+#debug > label
+{
+	width:200px;
+	text-align:right;
+}
+#debug
+{
+	font-size:22px;
+}
+
+#display
+{
+	display:flex;
+	justify-content:space-around;
+	margin:16px;
+	padding:16px;
+}
+.time-block
+{
+	border:solid 3px;
+	border-radius:10px;
+	width:148px;
+	box-shadow:0px 0px 25px 5px gray;
+}
+.time-unit
+{
+	font-family:'Digital-7 Mono';
+	font-size:68px;
+	color:rgb(200,0,0);
+	background-color:Highlight;
+	height:148px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.time-marker
+{
+	font-size:22px;
+	border:solid 1px;
+	background-color: darkred;
+	color:aliceblue;
+	text-align:center;
 }
