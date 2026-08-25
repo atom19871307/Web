@@ -1,4 +1,7 @@
 ﻿// JavaScript source code
+//////////////////////////////////////////////////////////////////
+let alarmPlayed = false;
+/////////////////////////////////////////////////////////////////
 function setImage()
 {
 	let filename = document.getElementById("image-file");
@@ -102,7 +105,8 @@ function changeTransitionDuration(event)
 	{
 		display.style.color = 'orange';
 		display.style.fontWeight = 'bold';
-	} else {
+	} else
+	{
 		display.style.color = '';
 		display.style.fontWeight = '';
 	}
@@ -118,6 +122,9 @@ function changeTransitionDuration(event)
 document.getElementById('btn-start').addEventListener("click", startCountdownTimer);
 function startCountdownTimer()
 {
+	/////////////////////////////////////////////////////////////////////////////
+	alarmPlayed = false;
+	/////////////////////////////////////////////////////////////////////////////
 	let element = document.createElement("li");
 	element.innerHTML = "Element";
 	document.getElementById("construct").after(element);
@@ -162,9 +169,19 @@ function tickCountdown()
 	targetTime.setFullYear(targetDate.getFullYear());
 	targetTime.setMonth(targetDate.getMonth());
 	targetTime.setDate(targetDate.getDate());
-
-	let timestamp = Math.abs(targetTime - now);
+	//******************************************************************
+	let timestamp = targetTime - now;
+	//let timestamp = Math.abs(targetTime - now);
+	//******************************************************************
 	let duration = Math.trunc(timestamp / 1000);	//Truncation
+
+	///////////////////////////////////////////////////////////////////////////////////////////
+	// Եթե ժամանակը վերջացել է և ազդանշանը դեռ չի հնչել
+	if (timestamp <= 0 )
+	{
+		playAlarm();
+	}
+	//////////////////////////////////////////////////////////////////////////////////////////
 
 	document.getElementById("target-date-value").innerHTML = targetDate;
 	document.getElementById("target-time-value").innerHTML = targetTime;
@@ -286,3 +303,23 @@ function resetDisplay()
 	while (display.children[0].children[0].id != "hours-unit")
 		display.children[0].remove();
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+function playAlarm()
+{
+	let audio = document.getElementById("alarm-sound");
+	if (audio)
+	{
+		audio.currentTime = 0;   // սկզբից
+		audio.play();            // միացնել
+		audio.loop = true;       // կրկնել
+	}
+
+	// ֆոնը կարմիր դարձնել 3 վայրկյանով
+	document.body.style.backgroundColor = "red";
+	setTimeout(() =>
+	{
+		document.body.style.backgroundColor = "";
+	}, 3000);
+}
+////////////////////////////////////////////////////////////////////////////////////////////
